@@ -37,20 +37,20 @@
     </div>
   {% endif %}
 
-  <h3>Question 1</h3>
+  <h3>Question 2</h3>
     Text of question 1.<br><br>
     <div>
         <button type="button" onClick="alert('Insert hints here')">Hint</button>
     </div>
       <br>
-      <form method="post" action="#show1">
+      <form method="post" action="#show2">
         <label for="answer1">Answer</label><br>
         <input type="text" id="answer1" name="answer1" placeholder="Answer to question 1"><br>
         <input type="submit" name="Question 1" value="Submit answer" class="btn tbn-success">
       </form>
 
   {% if show_answer2 %}
-    <div class="alert alert-success" id="show1">
+    <div class="alert alert-success" id="show2">
       <h4>Your answer:</h4> {{ user_result2 }}<br><br>
       <h4>Right answer:</h4>
       {{ result2 }}<br><br>
