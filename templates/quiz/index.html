@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Questions{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  Insert introduction<br><br>
+  <h3>Question 1</h3>
+    Text of question 1.<br><br>
+    <div>
+        <button type="button" onClick="alert('Insert hints here')">Hint</button>
+    </div>
+      <br>
+      <form method="post" action="#show1">
+        <label for="answer1">Answer</label><br>
+        <input type="text" id="answer1" name="answer1" placeholder="Answer to question 1"><br>
+        <input type="submit" name="Question 1" value="Submit answer" class="btn tbn-success">
+      </form>
+
+  {% if show_answer1 %}
+    <div class="alert alert-success" id="show1">
+      <h4>Your answer:</h4> {{ user_result1 }}<br><br>
+      <h4>Right answer:</h4>
+      {{ result1 }}<br><br>
+      <h4>Info:</h4>
+      {{ expl_1 }}<br><br>
+      <h4>Was your answer correct??</h4>
+      <form method="post" style="display: initial">
+        <input type="radio" id="Yes1" name="Points" value="Yes">
+        <label for="Yes1" style="font-weight: normal">Yes</label><br>
+        <input type="radio" id="No1" name="Points" value="No">
+        <label for="No1" style="font-weight: normal">No</label><br>
+        <input type="submit" name="Points1_btn" value="Submit answer" class="btn tbn-success">
+      </form>
+      <h4>Your points:</h4> {{points}} <br><br>
+    </div>
+  {% endif %}
+
+  <h3>Question 1</h3>
+    Text of question 1.<br><br>
+    <div>
+        <button type="button" onClick="alert('Insert hints here')">Hint</button>
+    </div>
+      <br>
+      <form method="post" action="#show1">
+        <label for="answer1">Answer</label><br>
+        <input type="text" id="answer1" name="answer1" placeholder="Answer to question 1"><br>
+        <input type="submit" name="Question 1" value="Submit answer" class="btn tbn-success">
+      </form>
+
+  {% if show_answer2 %}
+    <div class="alert alert-success" id="show1">
+      <h4>Your answer:</h4> {{ user_result2 }}<br><br>
+      <h4>Right answer:</h4>
+      {{ result2 }}<br><br>
+      <h4>Info:</h4>
+      {{ expl_2 }}<br><br>
+      <h4>Was your answer correct??</h4>
+      <form method="post" style="display: initial">
+        <input type="radio" id="Yes2" name="Points" value="Yes">
+        <label for="Yes2" style="font-weight: normal">Yes</label><br>
+        <input type="radio" id="No2" name="Points" value="No">
+        <label for="No2" style="font-weight: normal">No</label><br>
+        <input type="submit" name="Points2_btn" value="Submit answer" class="btn tbn-success">
+      </form>
+      <h4>Your points:</h4> {{points}} <br><br>
+    </div>
+  {% endif %}
+{% endblock %}
